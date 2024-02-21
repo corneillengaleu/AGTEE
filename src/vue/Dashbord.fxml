@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.Sphere?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Contoller_dashbord">
+   <children>
+      <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="620.0" prefWidth="801.0" snapToPixel="false">
+         <children>
+            <PieChart fx:id="presence" layoutX="8.0" layoutY="14.0" prefHeight="228.0" prefWidth="325.0" style="-fx-background-color: green;" title="NOMBRE ELEVE TRANSPORT" />
+            <PieChart fx:id="ninscript" layoutX="317.0" layoutY="268.0" prefHeight="228.0" prefWidth="373.0" style="-fx-background-color: violet;" title="NOMBRE ELEVE NON INSCRIPT AU TRANSPORT" />
+            <PieChart fx:id="bus" layoutX="10.0" layoutY="271.0" prefHeight="228.0" prefWidth="299.0" style="-fx-background-color: yellow;" title="NOMBRE DE VOITURE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="581.0" layoutX="692.0" layoutY="14.0" stroke="#f5f5f5" strokeType="INSIDE" style="-fx-arc-height: 20; -fx-arc-width: 20;" width="109.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.04410000145435333" green="0.25613999366760254" blue="0.6299999952316284" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5574600100517273" green="0.6299999952316284" blue="0.04410000145435333" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="96.0" layoutX="28.0" layoutY="518.0" stroke="#f5f5f5" strokeType="INSIDE" style="-fx-arc-width: 50; -fx-arc-height: 50;" width="590.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.04410000145435333" green="0.25613999366760254" blue="0.6299999952316284" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5574600100517273" green="0.6299999952316284" blue="0.04410000145435333" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Sphere cullFace="FRONT" layoutX="745.0" layoutY="524.0" radius="50" />
+            <Label alignment="CENTER" layoutX="649.0" layoutY="79.0" prefHeight="114.0" prefWidth="102.0" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="682.0" layoutY="20.0" prefHeight="30.0" prefWidth="107.0" text="CHAUFFEUR" textFill="WHITE" />
+            <PieChart fx:id="inscript" layoutX="344.0" layoutY="14.0" prefHeight="229.0" prefWidth="338.0" style="-fx-background-color: orange;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

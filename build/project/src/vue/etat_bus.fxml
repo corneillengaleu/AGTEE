@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="975.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TreeTableView layoutY="266.0" prefHeight="362.0" prefWidth="636.0">
+        <columns>
+          <TreeTableColumn prefWidth="106.0" text="Bus" />
+          <TreeTableColumn prefWidth="109.0" text="Date" />
+            <TreeTableColumn prefWidth="173.0" text="cause" />
+            <TreeTableColumn prefWidth="237.0" text="Etat" />
+        </columns>
+      </TreeTableView>
+      <TextArea layoutX="74.0" layoutY="161.0" prefHeight="102.0" prefWidth="402.0" />
+      <TextArea layoutX="152.0" layoutY="105.0" prefHeight="49.0" prefWidth="322.0" />
+      <Label layoutX="9.0" layoutY="111.0" prefHeight="37.0" prefWidth="103.0" text="Cause">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="7.0" layoutY="183.0" prefHeight="37.0" prefWidth="62.0" text="Etat">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="152.0" layoutY="68.0" prefHeight="31.0" prefWidth="322.0" />
+      <Label layoutX="12.0" layoutY="62.0" prefHeight="37.0" prefWidth="103.0" text="Bus">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <WebView layoutX="638.0" layoutY="265.0" prefHeight="362.0" prefWidth="333.0" />
+   </children>
+</AnchorPane>

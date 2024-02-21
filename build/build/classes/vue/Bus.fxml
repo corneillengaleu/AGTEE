@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #ecfffa;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller_driver">
+   <children>
+      <AnchorPane prefHeight="620.0" prefWidth="975.0">
+         <children>
+            <Label alignment="BASELINE_LEFT" layoutX="6.0" layoutY="50.0" prefHeight="17.0" prefWidth="117.0" text="Maticulation" textAlignment="CENTER" textFill="#236fd9">
+               <font>
+                  <Font name="SansSerif Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" layoutX="6.0" layoutY="93.0" prefHeight="17.0" prefWidth="117.0" text="proprietaire" textAlignment="CENTER" textFill="#236fd9">
+               <font>
+                  <Font name="SansSerif Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" layoutX="9.0" layoutY="150.0" prefHeight="17.0" prefWidth="117.0" text="Nombre de place" textAlignment="CENTER" textFill="#236fd9">
+               <font>
+                  <Font name="SansSerif Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutX="473.0" layoutY="51.0" prefHeight="17.0" prefWidth="117.0" text="Type de voiture" textAlignment="CENTER" textFill="#236fd9">
+               <font>
+                  <Font name="SansSerif Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutX="476.0" layoutY="113.0" prefHeight="17.0" prefWidth="117.0" text="Etat du bus" textAlignment="CENTER" textFill="#236fd9">
+               <font>
+                  <Font name="SansSerif Italic" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutY="35.0" prefHeight="0.0" prefWidth="967.0" style="-fx-background-color: black;" />
+            <Pane layoutX="7.0" layoutY="197.0" prefHeight="62.0" prefWidth="973.0" style="-fx-border-color: #25a5cc;">
+               <children>
+                  <Button fx:id="supprimer" layoutX="413.0" layoutY="7.0" mnemonicParsing="false" onAction="#delete" prefHeight="37.0" prefWidth="159.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ajouter" layoutX="12.0" layoutY="7.0" mnemonicParsing="false" onAction="#addC" prefHeight="37.0" prefWidth="159.0" style="-fx-background-color: #5f36a8;" text="Ajouter" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="modifier" layoutX="218.0" layoutY="7.0" mnemonicParsing="false" onAction="#modify" prefHeight="37.0" prefWidth="159.0" style="-fx-background-color: #30e310;" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="impression" layoutX="827.0" layoutY="6.0" mnemonicParsing="false" onAction="#impression" prefHeight="47.0" prefWidth="143.0" style="-fx-background-color: white; -fx-border-color: black;" text="Impression" textFill="#f80000">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <TextField fx:id="contenu_recherche" layoutX="301.0" layoutY="2.0" onAction="#contenu_recherche" prefHeight="25.0" prefWidth="573.0" promptText="Recherche " style="-fx-border-radius: 15;" />
+            <TreeTableView fx:id="table" editable="true" layoutX="7.0" layoutY="262.0" prefHeight="358.0" prefWidth="981.0" sortMode="ONLY_FIRST_LEVEL" tableMenuButtonVisible="true">
+               <columns>
+                  <TreeTableColumn prefWidth="322.0" text="MATRICULATION" />
+                  <TreeTableColumn prefWidth="116.0" text="NOMBRE DE PLACE" />
+                  <TreeTableColumn prefWidth="132.0" text="TYPE VOITURE" />
+                  <TreeTableColumn prefWidth="86.0" text="PROPRIETAIRE" />
+                  <TreeTableColumn prefWidth="112.0" text="ETAT DU BUS" />
+               </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="1.0" prefHeight="27.0" prefWidth="288.0" style="-fx-background-color: #5f36a8;" text="BUS" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" layoutX="475.0" layoutY="164.0" prefHeight="17.0" prefWidth="117.0" text="M" textAlignment="CENTER" textFill="#236fd9">
+               <font>
+                  <Font name="SansSerif Italic" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom" layoutX="118.0" layoutY="43.0" prefHeight="25.0" prefWidth="259.0" style="-fx-border-color: #5f36a8; -fx-border-radius: 30; -fx-background-color: white;" />
+            <TextField fx:id="prenom" layoutX="119.0" layoutY="89.0" prefHeight="25.0" prefWidth="259.0" style="-fx-border-color: #5f36a8; -fx-border-radius: 30; -fx-background-color: white;" />
+            <TextField fx:id="date" layoutX="120.0" layoutY="143.0" prefHeight="25.0" prefWidth="259.0" style="-fx-border-color: #5f36a8; -fx-border-radius: 30; -fx-background-color: white;" />
+            <TextField fx:id="telephone" layoutX="584.0" layoutY="159.0" prefHeight="25.0" prefWidth="259.0" style="-fx-border-color: #5f36a8; -fx-border-radius: 30; -fx-background-color: white;" />
+            <TextField fx:id="experience" layoutX="584.0" layoutY="45.0" prefHeight="25.0" prefWidth="259.0" style="-fx-border-color: #5f36a8; -fx-border-radius: 30; -fx-background-color: white;" />
+            <TextField fx:id="nation" layoutX="581.0" layoutY="105.0" prefHeight="27.0" prefWidth="259.0" style="-fx-border-color: #5f36a8; -fx-border-radius: 30; -fx-background-color: white;" />
+            <Button fx:id="recherche" layoutX="879.0" layoutY="1.0" mnemonicParsing="false" onAction="#search" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: black;" text="Search" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

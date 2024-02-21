@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="home" prefHeight="480.0" prefWidth="508.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller_siging_lost">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="97.0" prefWidth="508.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" layoutY="3.0" prefHeight="87.0" prefWidth="508.0" text="Information Oubliée" textAlignment="CENTER" textFill="#25a5cc">
+               <font>
+                  <Font name="SansSerif Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="97.0" prefHeight="385.0" prefWidth="508.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="51.0" layoutY="82.0" prefHeight="18.0" prefWidth="33.0" text="Mail" />
+            <Label layoutX="294.0" layoutY="123.0" text="Or" />
+            <Label layoutX="36.0" layoutY="156.0" text="Telephone" />
+            <Button layoutX="250.0" layoutY="227.0" mnemonicParsing="false" onAction="#valider" prefHeight="30.0" prefWidth="109.0" style="-fx-background-color: #25a5cc;" text="Valider" />
+            <Label fx:id="information" layoutX="34.0" layoutY="286.0" prefHeight="77.0" prefWidth="440.0" />
+            <Label fx:id="erreur" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" prefHeight="55.0" prefWidth="463.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="55.0" layoutY="231.0" onAction="#connecter" text="Se connecter" />
+            <TextField fx:id="mail" layoutX="126.0" layoutY="70.0" prefHeight="37.0" prefWidth="343.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-color: #25a5cc;" />
+            <TextField fx:id="phone" layoutX="126.0" layoutY="146.0" prefHeight="37.0" prefWidth="343.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-color: #25a5cc;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

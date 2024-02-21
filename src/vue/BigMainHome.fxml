@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="695.0" prefWidth="1078.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller_BigMainClass">
+  <children>
+      <SplitPane orientation="VERTICAL">
+        <items>
+            <Pane prefHeight="57.0" prefWidth="975.0" style="-fx-background-color: #5f36a8;">
+               <children>
+                  <Button fx:id="dasbord" layoutX="553.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#dashbord" style="-fx-background-color: #5f36a8;" text="TABLEAU DE BORD" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
+                  <Label fx:id="connect" layoutX="667.0" prefHeight="45.0" prefWidth="307.0" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="699.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #5f36a8;" text="ETAT" textFill="WHITE" underline="true">
+                    <items>
+                      <MenuItem style="-fx-background-color: white;" text="Bus" />
+                    </items>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="830.0" layoutY="19.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: #5f36a8;" text="GESTION" textFill="WHITE" underline="true">
+                     <items>
+                        <MenuItem style="-fx-background-color: white;" text="BUS" />
+                        <MenuItem mnemonicParsing="false" text="ELEVES" />
+                        <MenuItem style="-fx-background-color: white;" text="CHAUFFEUR" />
+                     </items>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </MenuButton>
+                  <Label fx:id="label_profil" alignment="CENTER" contentDisplay="CENTER" layoutX="-9.0" layoutY="24.0" prefHeight="27.0" prefWidth="146.0" textAlignment="CENTER" textFill="#22ff00">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+        </items>
+      </SplitPane>
+    <SplitPane dividerPositions="0.1" prefHeight="648.0" prefWidth="1106.0" snapToPixel="false" style="-fx-background-color: #5f36a8;">
+      <items>
+            <VBox SplitPane.resizableWithParent="false">
+               <children>
+              <AnchorPane focusTraversable="true" prefHeight="606.0" prefWidth="201.0" style="-fx-background-color: #5f36a8;">
+                     <children>
+                        <Pane fx:id="student" focusTraversable="true" onMouseClicked="#student" prefHeight="45.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" layoutX="55.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#student" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="STUDENT" textFill="#eeeeee">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="PERSON" layoutX="14.0" layoutY="5.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="payment" layoutY="55.0" onMouseClicked="#paiement" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="54.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#paiement" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="PAIEMENT" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="PAYMENT" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="bus" layoutY="117.0" onMouseClicked="#bus" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="56.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#bus" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="BUS" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="DRIVE_ETA" layoutX="14.0" layoutY="13.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="parameter" layoutX="-1.0" layoutY="493.0" onMouseClicked="#parametre" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="52.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#parametre" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="PARAMETRE" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="SETTINGS_BRIGHTNESS" layoutX="13.0" layoutY="12.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="driver" layoutY="179.0" onMouseClicked="#driver" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="55.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#driver" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="CHAUFFEUR" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="PERSON_ADD" layoutX="13.0" layoutY="12.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="help" layoutX="-1.0" layoutY="553.0" onMouseClicked="#aide" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="54.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#aide" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="AIDE" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="HELP_OUTLINE" layoutX="12.0" layoutY="13.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="terminal" layoutX="-1.0" layoutY="242.0" onMouseClicked="#terminal" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="54.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#terminal" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="TERMINAL" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="PHONE_IPHONE" layoutX="13.0" layoutY="13.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="role" layoutX="1.0" layoutY="305.0" onMouseClicked="#role" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="53.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#role" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="ROLE" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="PEOPLE" layoutX="10.0" layoutY="13.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="localisation" layoutX="1.0" layoutY="368.0" onMouseClicked="#localisation" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="50.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#localisation" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="LOCALISATION" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="MAP" layoutX="12.0" layoutY="13.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="report" layoutY="430.0" onMouseClicked="#sage" prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: #491f97;">
+                           <children>
+                              <Button alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="53.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#sage" prefHeight="30.0" prefWidth="131.0" style="-fx-background-color: #5f36a8;" text="REPORTING" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Icon content="LIBRARY_BOOKS" layoutX="12.0" layoutY="12.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: white;" />
+                           </children>
+                        </Pane>
+                     </children>
+              </AnchorPane>
+               </children>
+            </VBox>
+        <ScrollPane hvalue="0.1" pannable="true" pickOnBounds="false" prefHeight="646.0" prefWidth="837.0" style="-fx-background-color: white;" vvalue="0.06" SplitPane.resizableWithParent="false">
+          <content>
+            <AnchorPane id="Content" fx:id="changer" minHeight="-1.0" minWidth="-1.0" opacity="0.78" prefHeight="620.0" prefWidth="801.0" snapToPixel="false">
+                     <children>
+                        <AnchorPane id="Content" layoutX="30.0" layoutY="6.0" minHeight="-1.0" minWidth="-1.0" prefHeight="620.0" prefWidth="801.0" snapToPixel="false">
+                           <children>
+                              <ImageView fitHeight="622.0" fitWidth="813.0" pickOnBounds="true" style="-fx-border-image-width: 50;">
+                                 <image>
+                                    <Image url="@../image/image/image.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+          </content>
+        </ScrollPane>
+      </items>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+    </SplitPane>
+  </children>
+</VBox>

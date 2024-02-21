@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.VBox?>
+
+<ButtonBar prefHeight="620.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller_geolocalisation">
+   <buttons>
+      <SplitPane prefHeight="620.0" prefWidth="900.0">
+         <items>
+            <VBox fx:id="vbox" />
+         </items>
+      </SplitPane>
+   </buttons>
+</ButtonBar>

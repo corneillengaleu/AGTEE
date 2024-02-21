@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller_student">
+   <children>
+      <Label alignment="CENTER" layoutX="28.0" layoutY="37.0" prefHeight="17.0" prefWidth="183.0" text="Nom" textAlignment="CENTER" textFill="#b60dc3">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="59.0" layoutY="83.0" prefHeight="17.0" prefWidth="132.0" text="Prenom" textAlignment="CENTER" textFill="#b60dc3">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="132.0" prefHeight="17.0" prefWidth="132.0" text="Telephone 1" textAlignment="CENTER" textFill="#b60dc3">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="57.0" layoutY="239.0" prefHeight="17.0" prefWidth="132.0" text="Adesse mail" textAlignment="CENTER" textFill="#b60dc3">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="288.0" prefHeight="17.0" prefWidth="132.0" text="Profession" textAlignment="CENTER" textFill="#b60dc3">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="52.0" layoutY="338.0" prefHeight="17.0" prefWidth="132.0" text="Enfant" textAlignment="CENTER" textFill="#b60dc3">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutY="29.0" prefWidth="262.0" style="-fx-background-color: black;" />
+      <Separator layoutX="1.0" layoutY="409.0" prefWidth="262.0" style="-fx-background-color: black;" />
+      <ComboBox editable="true" layoutX="9.0" layoutY="355.0" prefHeight="27.0" prefWidth="233.0" style="-fx-border-color: violet; -fx-border-radius: 20;" visibleRowCount="30" />
+      <Pane layoutX="10.0" layoutY="429.0" prefHeight="82.0" prefWidth="250.0" style="-fx-border-color: #25a5cc;">
+         <children>
+            <Button layoutX="166.0" layoutY="51.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: #25a5cc;" text="Ajouter" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="91.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: violet;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TextField layoutX="301.0" layoutY="2.0" prefHeight="29.0" prefWidth="738.0" promptText="Recherche" style="-fx-border-radius: 30; -fx-border-color: #25a5cc; -fx-background-color: white;">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <TreeTableView editable="true" layoutX="297.0" layoutY="35.0" prefHeight="585.0" prefWidth="781.0" sortMode="ONLY_FIRST_LEVEL" tableMenuButtonVisible="true">
+         <columns>
+            <TreeTableColumn prefWidth="322.0" text="Nom complet" />
+            <TreeTableColumn prefWidth="116.0" text="Telephone 1" />
+            <TreeTableColumn prefWidth="92.0" text="Telephone 2" />
+            <TreeTableColumn prefWidth="57.0" text="enfant" />
+            <TreeTableColumn prefWidth="158.0" text="Adresse mail" />
+         </columns>
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TreeTableView>
+      <Label alignment="CENTER" layoutX="2.0" layoutY="1.0" prefHeight="27.0" prefWidth="288.0" text="PARENT" textFill="#25a5cc">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="184.0" prefHeight="17.0" prefWidth="132.0" text="Telephone 2" textAlignment="CENTER" textFill="#b60dc3">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="4.0" layoutY="59.0" prefHeight="25.0" prefWidth="279.0" style="-fx-border-color: violet; -fx-border-radius: 20; -fx-background-color: white;" />
+      <TextField layoutX="4.0" layoutY="103.0" prefHeight="25.0" prefWidth="279.0" style="-fx-border-color: violet; -fx-border-radius: 20; -fx-background-color: white;" />
+      <TextField layoutX="3.0" layoutY="159.0" prefHeight="25.0" prefWidth="279.0" style="-fx-border-color: violet; -fx-border-radius: 20; -fx-background-color: white;" />
+      <TextField layoutX="4.0" layoutY="204.0" prefHeight="25.0" prefWidth="279.0" style="-fx-border-color: violet; -fx-border-radius: 20; -fx-background-color: white;" />
+      <TextField layoutX="4.0" layoutY="258.0" prefHeight="25.0" prefWidth="279.0" style="-fx-border-color: violet; -fx-border-radius: 20; -fx-background-color: white;" />
+      <TextField layoutX="5.0" layoutY="309.0" prefHeight="25.0" prefWidth="279.0" style="-fx-border-color: violet; -fx-border-radius: 20; -fx-background-color: white;" />
+   </children>
+</AnchorPane>

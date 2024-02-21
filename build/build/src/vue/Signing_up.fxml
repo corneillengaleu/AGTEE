@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.weathericons.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="969.0" style="-fx-background-color: #062c3f;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller_signing_up">
+   <children>
+      <Pane layoutY="-6.0" prefHeight="92.0" prefWidth="969.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Label alignment="CENTER" layoutX="193.0" layoutY="4.0" prefHeight="91.0" prefWidth="583.0" style="-fx-background-color: white;" text="INSCRIPTION" textFill="#25a5cc">
+               <font>
+                  <Font name="SansSerif Bold" size="40.0" />
+               </font>
+            </Label>
+            <WeatherIconView fill="#25a5cc" glyphName="REFRESH" layoutX="37.0" layoutY="62.0" onMouseClicked="#actualiser" selectionFill="#0d14cd" size="40" stroke="#25a5cc" strokeLineCap="ROUND" textAlignment="CENTER" wrappingWidth="69.0">
+               <font>
+                  <Font name="SansSerif Bold" size="65.0" />
+               </font>
+            </WeatherIconView>
+         </children>
+      </Pane>
+      <Pane layoutX="-2.0" layoutY="88.0" prefHeight="233.0" prefWidth="969.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Pane layoutX="1.0" layoutY="30.0" prefHeight="191.0" prefWidth="969.0" style="-fx-background-color: white;">
+               <children>
+                  <TextField fx:id="phone" layoutX="111.0" layoutY="97.0" prefHeight="27.0" prefWidth="360.0" promptText="telephone" style="-fx-border-radius: 5; -fx-border-color: #25a5cc;" />
+                  <Label layoutX="74.0" layoutY="97.0" prefHeight="27.0" prefWidth="18.0" text="*" textFill="#e10505">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="98.0" prefHeight="25.0" prefWidth="63.0" text="Phone" textFill="#062c3f" />
+                  <Label fx:id="label" layoutX="291.0" layoutY="152.0" prefHeight="23.0" prefWidth="360.0">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mailabel" layoutX="145.0" layoutY="163.0" prefHeight="25.0" prefWidth="360.0" />
+                  <Label layoutX="569.0" layoutY="47.0" prefHeight="27.0" prefWidth="18.0" text="*" textFill="#e10505">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="75.0" layoutY="40.0" prefHeight="27.0" prefWidth="18.0" text="*" textFill="#e10505">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="75.0" layoutY="3.0" prefHeight="27.0" prefWidth="18.0" text="*" textFill="#e10505">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="484.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="2.0" />
+               </children>
+            </Pane>
+            <TextField fx:id="fname" layoutX="113.0" layoutY="37.0" prefHeight="25.0" prefWidth="360.0" promptText="nom" style="-fx-border-radius: 5; -fx-border-color: #25a5cc;" />
+            <TextField fx:id="lname" layoutX="112.0" layoutY="84.0" prefHeight="25.0" prefWidth="360.0" promptText="prenom" style="-fx-border-radius: 5; -fx-border-color: #25a5cc;" />
+            <TextField fx:id="mail" layoutX="602.0" layoutY="34.0" onInputMethodTextChanged="#checkmail" prefHeight="25.0" prefWidth="360.0" promptText="mail" style="-fx-border-radius: 5; -fx-border-color: #25a5cc;" />
+            <PasswordField fx:id="pass" layoutX="603.0" layoutY="77.0" onInputMethodTextChanged="#labell" prefHeight="25.0" prefWidth="360.0" promptText="password" style="-fx-border-radius: 5; -fx-border-color: #25a5cc;" />
+            <PasswordField fx:id="repass" layoutX="606.0" layoutY="128.0" prefHeight="25.0" prefWidth="360.0" promptText="confirm password" style="-fx-border-radius: 5; -fx-border-color: #25a5cc;" />
+            <Label layoutX="11.0" layoutY="38.0" prefHeight="25.0" prefWidth="63.0" text="First Name" textFill="#062c3f" />
+            <Label layoutX="10.0" layoutY="81.0" prefHeight="25.0" prefWidth="63.0" text="Last Name" textFill="#062c3f" />
+            <Label layoutX="503.0" layoutY="37.0" prefHeight="25.0" prefWidth="44.0" text="Mail" textFill="#062c3f" />
+            <Label layoutX="500.0" layoutY="82.0" prefHeight="25.0" prefWidth="54.0" text="Pasword" textFill="#062c3f" />
+            <Label layoutX="496.0" layoutY="134.0" prefHeight="25.0" prefWidth="102.0" text="Confirm Pasword" textFill="#062c3f" />
+            <Label fx:id="evolution" layoutX="5.0" layoutY="315.0" prefHeight="43.0" prefWidth="503.0" />
+            <Button fx:id="inscrire" layoutX="292.0" layoutY="360.0" mnemonicParsing="false" onAction="#inscrire" prefHeight="27.0" prefWidth="111.0" style="-fx-background-color: #062c3f; -fx-border-color: #062c3f;" text="s'inscrire" textFill="WHITE" />
+            <Label layoutX="590.0" layoutY="128.0" prefHeight="27.0" prefWidth="18.0" text="*" textFill="#e10505">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="inscription" alignment="CENTER" contentDisplay="CENTER" layoutX="-4.0" prefHeight="27.0" prefWidth="519.0" textAlignment="CENTER" textFill="#2cc614">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <TreeTableView layoutX="-2.0" layoutY="323.0" prefHeight="348.0" prefWidth="969.0">
+        <columns>
+          <TreeTableColumn prefWidth="504.0" text="Nom complet" />
+          <TreeTableColumn prefWidth="100.0" text="phone" />
+            <TreeTableColumn minWidth="0.0" prefWidth="162.0" text="email" />
+        </columns>
+      </TreeTableView>
+   </children>
+</AnchorPane>

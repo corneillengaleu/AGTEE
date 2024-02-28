@@ -13,12 +13,13 @@ public class Controller_report {
 
 @FXML
 void initialize() {
-	PrinterJob job = PrinterJob.createPrinterJob();
+	webview.getEngine().load("http://localhost:8080/jasperserver/");
+	/*PrinterJob job = PrinterJob.createPrinterJob();
 Stage primaryStage = null;
-    webview.getEngine().load("http://localhost:8080/jasperserver/flow.html/flowFile/LISTE_DES_ELEVS_DU_TRANSPORT.pdf");
+   // webview.getEngine().load("http://localhost:8080/jasperserver/");
     if(job!=null && job.showPrintDialog(primaryStage)) {
     webview.getEngine().print(job);
     job.endJob();
-    }
+    }*/
 }
 }

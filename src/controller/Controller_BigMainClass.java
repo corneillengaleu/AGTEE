@@ -2,6 +2,7 @@
 
 import java.io.IOException;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -107,6 +108,12 @@ public class Controller_BigMainClass {
 			    	changer.getChildren().removeAll();
 			    	changer.getChildren().setAll(fxml);
 			
+			    }
+			    @FXML
+			    void etatbus(ActionEvent event) throws IOException {
+			    	fxml=FXMLLoader.load(getClass().getResource("/vue/etat_bus.fxml"));
+			    	changer.getChildren().removeAll();
+			    	changer.getChildren().setAll(fxml);
 			    }
 			
 			    @FXML
